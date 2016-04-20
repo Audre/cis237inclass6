@@ -1,4 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity
+@*This if checks to see if the peson is authenticated or not. 
+    Might be good for hiding links.
+    Need to be authenticated to see beverage link and beverages.*@
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))

@@ -13,12 +13,15 @@ namespace cis237inclass6
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Could use this route if you wanted to. It will work.
+            // We just don't need it so I commented it out. 
+/*
             routes.MapRoute(
                 name: "Foo",
-                url: "{controller}/foo",
-                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
+                url: "Foo",
+                defaults: new { controller = "Home", action = "Foo", id = UrlParameter.Optional }
             );
-
+*/
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

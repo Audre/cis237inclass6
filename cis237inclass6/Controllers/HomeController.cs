@@ -33,5 +33,17 @@ namespace cis237inclass6.Controllers
 
             return View();
         }
+
+        // Added this method for a static page.
+        // When the user goes to /Home/Foo this is the method that will be
+        // called. See the routeConfig file for more info.
+
+        // Just added authorize so that you can't go to foo if you aren't
+        // logged in.
+        [Authorize]
+        public ActionResult Foo()
+        {
+            return View();
+        }
     }
 }
