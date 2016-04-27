@@ -23,10 +23,18 @@ namespace cis237inclass6
             );
 */
             routes.MapRoute(
+                name: "Json",
+                url: "api/{controller}/Json",
+                defaults: new { controller = "Car", action = "Json" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            
         }
     }
 }
